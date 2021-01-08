@@ -1,0 +1,7 @@
+.sections {
+    padding: 3em 0;
+}
+
+.sections:nth-child(even) {
+    background-color: #edeae9;
+}
