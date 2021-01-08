@@ -1,65 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from "next/image";
+//User
+import { useGetUser } from "../models/user";
+//Components
+import Layout from "../components/layout/Layout";
+import Logo from "../components/SVG/Logo";
+//CSS
+import styles from "../styles/accueil.module.css";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+export default function Accueil() {
+    const data = useGetUser();
+    return (
+        <>
+            <Layout title='Accueil | Les Griffonnages de Lise'>
+                <section className={[styles.sections, styles.sectionTop].join(" ")}>
+                    <div className='container'>
+                        <div>
+                            <Logo className={styles.logo} />
+                            <div>
+                                <h2>Les récits d'une fan</h2>
+                                <p className={styles.pAccueil}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis turpis dapibus,
+                                    ornare urna eu, convallis nibh. Praesent nisl arcu, congue dictum leo ut, egestas
+                                    ultricies purus. Integer accumsan metus eu.
+                                </p>
+                                <button className='btn'>Je choisis une lecture</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className={[styles.sections, styles.sectionsLivres].join(" ")}>
+                    <div className='container'>
+                        <Image
+                            src='/images/deliquescence-espoir.png'
+                            alt='Couverture du livre'
+                            width={400}
+                            height={624}
+                        />
+                    </div>
+                </section>
+                <section className={[styles.sections, styles.sectionsLivres].join(" ")}>
+                    <div className='container'>
+                        <Image src='/images/myrddin.png' alt='Couverture du livre' width={400} height={624} />
+                    </div>
+                </section>
+            </Layout>
+        </>
+    );
 }

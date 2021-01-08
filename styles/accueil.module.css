@@ -1,0 +1,28 @@
+.sections {
+    padding: 3em 0;
+}
+
+.sectionTop {
+    height: 100vh;
+    max-height: 695px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    color: #006d77;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+}
+
+.pAccueil {
+    line-height: 1.5em;
+    margin: 0 0 2em;
+}
+
+.sectionsLivres:nth-child(even) {
+    background-color: #edeae9;
+}
