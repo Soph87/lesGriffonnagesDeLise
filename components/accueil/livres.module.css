@@ -5,3 +5,71 @@
 .sections:nth-child(even) {
     background-color: #edeae9;
 }
+
+.aside {
+    margin-top: 2em;
+}
+
+.livreImg {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.elSousTitre {
+    color: #46403b;
+    margin-right: 1em;
+}
+
+.resume {
+    line-height: 2em;
+    font-size: 1em;
+    margin: 0.6em 0 2em;
+}
+
+@media screen and (min-width: 600px) {
+    .livre {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .livreImg {
+        margin: 0;
+    }
+
+    .aside {
+        max-width: 400px;
+        margin-top: 0;
+        margin-left: 2em;
+    }
+
+    .sections:nth-child(odd) .livre {
+        flex-direction: row-reverse;
+    }
+
+    .sections:nth-child(odd) .aside {
+        margin: 0 2em 0 0;
+        text-align: right;
+    }
+
+    .sections:nth-child(odd) .elSousTitre {
+        margin: 0 0 0 1em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .livreImg {
+        width: 300px;
+    }
+
+    .aside {
+        margin-left: 3em;
+    }
+
+    .sections:nth-child(odd) .aside {
+        margin: 0 3em 0 0;
+    }
+}
