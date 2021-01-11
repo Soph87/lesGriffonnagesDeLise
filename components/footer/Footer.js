@@ -2,11 +2,16 @@ import React from "react";
 import Link from "next/link";
 //CSS
 import styles from "./footer.module.css";
+//Components
+import { ThemeContext } from "../ThemeContext";
 
 export default function Footer() {
+    const { colorMode } = React.useContext(ThemeContext);
+
     let annee = new Date().getFullYear();
+
     return (
-        <footer className={styles.footer}>
+        <footer className={[styles.footer, colorMode === "dark" ? styles.darkFooter : " "].join(" ")}>
             <div className='container'>
                 <p>
                     Lise Furnion - {annee} - Tout droit réservé -{" "}

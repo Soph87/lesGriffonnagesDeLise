@@ -60,6 +60,10 @@
         height: auto;
         opacity: 0.5;
     }
+
+    .darkSection .griffon {
+        opacity: 0.1;
+    }
 }
 
 @media screen and (min-width: 900px) and (min-height: 600px) {

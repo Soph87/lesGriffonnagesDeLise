@@ -4,10 +4,13 @@ import Image from "next/image";
 import Logo from "../SVG/Logo";
 //CSS
 import styles from "./sectiontop.module.css";
+//Components
+import { ThemeContext } from "../ThemeContext";
 
 export default function SectionTop() {
+    const { colorMode } = React.useContext(ThemeContext);
     return (
-        <section className={styles.section}>
+        <section className={[styles.section, colorMode === "dark" ? styles.darkSection : " "].join(" ")}>
             <div className={[styles.refImg, "container"].join(" ")}>
                 <div className={styles.hero}>
                     <Logo className={styles.logo} />

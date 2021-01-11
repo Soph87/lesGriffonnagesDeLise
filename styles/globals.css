@@ -18,11 +18,15 @@
     font-weight: 700;
 }
 
-html,
 body {
     background-color: #e5dedb;
     color: #797775;
     font-family: "Albra";
+}
+
+body.dark {
+    background-color: #20222a;
+    color: #c2c2c2;
 }
 
 * {
@@ -40,6 +44,10 @@ h2 {
     font-size: 1.2em;
     margin: 0 0 0.5em;
     color: #46403b;
+}
+
+body.dark h2 {
+    color: #ebebeb;
 }
 
 .btn {

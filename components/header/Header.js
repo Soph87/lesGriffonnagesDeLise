@@ -1,19 +1,24 @@
 import React from "react";
 import Link from "next/link";
+//CSS
 import styles from "./Header.module.css";
+//Components
+import { ThemeContext } from "../ThemeContext";
+import Switch from "./SwitchMode";
 
 function Header() {
+    const { colorMode } = React.useContext(ThemeContext);
     return (
-        <header id={styles.header}>
+        <header className={[styles.header, colorMode === "dark" ? styles.darkHeader : " "].join(" ")}>
             <div className='container'>
                 <Link href='/'>
-                    <a id={styles.titre}>
+                    <a className={styles.titre}>
                         <h1>LesGriffonnagesDeLise</h1>
                     </a>
                 </Link>
 
                 <div>
-                    <nav id={styles.nav}>
+                    <nav className={styles.nav}>
                         <Link href='/'>
                             <a className={styles.liens}>Accueil</a>
                         </Link>
@@ -24,6 +29,7 @@ function Header() {
                             <a>Déconnexion</a>
                         </Link> */}
                     </nav>
+                    <Switch />
                 </div>
             </div>
         </header>

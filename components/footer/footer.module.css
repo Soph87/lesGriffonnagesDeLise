@@ -6,6 +6,10 @@
     font-size: 0.8em;
 }
 
+.darkFooter {
+    background-color: #33353f;
+}
+
 .footer a {
     color: #797775;
 }

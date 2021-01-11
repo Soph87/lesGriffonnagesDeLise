@@ -2,10 +2,14 @@ import React from "react";
 import Link from "next/link";
 //CSS
 import styles from "./livres.module.css";
+//Components
+import { ThemeContext } from "../ThemeContext";
 
 export default function Livres() {
+    const { colorMode } = React.useContext(ThemeContext);
+
     return (
-        <>
+        <div className={colorMode === "dark" ? styles.darkLivres : " "}>
             <section className={styles.sections}>
                 <div className={[styles.livre, "container"].join(" ")}>
                     <img src='/images/deliquescence.png' alt='Couverture du livre' className={styles.livreImg} />
@@ -21,7 +25,7 @@ export default function Livres() {
                             sagittis eu lobortis in, scelerisque ornare eros. Phasellus a pharetra augue. Nam nec odio
                             sed erat gravida faucibus. Cras tellus risus, venenatis sit amet.
                         </p>
-                        <Link href='#'>
+                        <Link href='/'>
                             <a className='btn'>Commencer la lecture</a>
                         </Link>
                     </div>
@@ -42,12 +46,12 @@ export default function Livres() {
                             sagittis eu lobortis in, scelerisque ornare eros. Phasellus a pharetra augue. Nam nec odio
                             sed erat gravida faucibus. Cras tellus risus, venenatis sit amet.
                         </p>
-                        <Link href='#'>
+                        <Link href='/'>
                             <a className='btn'>Commencer la lecture</a>
                         </Link>
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
