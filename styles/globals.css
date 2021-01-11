@@ -66,6 +66,15 @@ body.dark h2 {
     background-color: #e07a5f;
 }
 
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 @media screen and (min-width: 400px) {
     .container {
         padding: 0 20px;

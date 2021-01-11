@@ -17,7 +17,7 @@ function Header() {
                     </a>
                 </Link>
 
-                <div>
+                <div className={styles.headerDroit}>
                     <nav className={styles.nav}>
                         <Link href='/'>
                             <a className={styles.liens}>Accueil</a>

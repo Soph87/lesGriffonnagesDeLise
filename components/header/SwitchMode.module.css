@@ -1,0 +1,55 @@
+.wrap {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-left: 0.5em;
+    overflow: hidden;
+}
+
+.inputSwitch {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 25;
+}
+
+.inputSwitch ~ .sun {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    width: 100%;
+}
+
+.inputSwitch ~ .moon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inputSwitch:checked ~ .sun {
+    top: 0;
+}
+
+.inputSwitch:checked ~ .moon {
+    top: -18px;
+}
+
+@media screen and (min-width: 400px) {
+    .wrap {
+        width: 20px;
+        height: 20px;
+        margin-left: 1em;
+    }
+
+    .inputSwitch ~ .sun {
+        top: 20px;
+    }
+
+    .inputSwitch:checked ~ .moon {
+        top: -20px;
+    }
+}
