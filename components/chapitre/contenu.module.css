@@ -1,0 +1,28 @@
+.lienSommaire {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-weight: 700;
+    color: #46403b;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.fleche {
+    width: 15px;
+    margin-right: 0.3em;
+}
+
+.lienSommaire:hover .fleche {
+    color: #df5d3b;
+}
+
+.chapitreContainer {
+    background-color: #edeae9;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.chapitreContainer h2 {
+    text-align: center;
+}

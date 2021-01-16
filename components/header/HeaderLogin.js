@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 import { ThemeContext } from "../ThemeContext";
 import Switch from "./SwitchMode";
 
-function Header() {
+export default function HeaderLogin() {
     const { colorMode } = React.useContext(ThemeContext);
     return (
         <header className={[styles.header, colorMode === "dark" ? styles.darkHeader : " "].join(" ")}>
@@ -18,12 +18,15 @@ function Header() {
                 </Link>
 
                 <div className={styles.headerDroit}>
-                    <nav className={styles.nav}>
+                    <nav className={[styles.nav, styles.navLogin].join(" ")}>
                         <Link href='/'>
                             <a className={styles.liens}>Accueil</a>
                         </Link>
-                        <Link href='/a-propos'>
-                            <a>À propos</a>
+                        <Link href='/back'>
+                            <a className={styles.liens}>Dashboard</a>
+                        </Link>
+                        <Link href='/api/logout'>
+                            <a>Déconnexion</a>
                         </Link>
                     </nav>
                     <Switch />
@@ -32,5 +35,3 @@ function Header() {
         </header>
     );
 }
-
-export default Header;

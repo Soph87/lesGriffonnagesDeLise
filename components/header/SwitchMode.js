@@ -24,8 +24,8 @@ export default function SwitchMode() {
                 id='btnMode'
                 className={styles.inputSwitch}
             />
-            <img src='images/sun.svg' alt='icone soleil' className={styles.sun} />
-            <img src='images/moon.svg' alt='icone lune' className={styles.moon} />
+            <img src='/images/sun.svg' alt='icone soleil' className={styles.sun} />
+            <img src='/images/moon.svg' alt='icone lune' className={styles.moon} />
         </div>
     );
 }

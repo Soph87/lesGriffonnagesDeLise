@@ -1,6 +1,6 @@
 import "../styles/normalize.css";
 import "../styles/globals.css";
-//Gestion du mode
+//Contexts
 import { ThemeProvider } from "../components/ThemeContext";
 
 function App({ Component, pageProps }) {

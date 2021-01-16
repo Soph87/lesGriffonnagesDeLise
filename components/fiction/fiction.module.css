@@ -1,0 +1,56 @@
+.livreImg {
+    width: 180px;
+    display: block;
+    margin: 0 0 1em;
+}
+
+.chapitres {
+    background-color: #edeae9;
+    padding: 1em;
+}
+
+.darkLivre .chapitres {
+    background-color: #33353f;
+}
+
+.chapitres ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chapitres li {
+    margin: 1em 0;
+}
+
+@media screen and (min-width: 400px) {
+    .chapitres {
+        padding: 1em 2em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .sectionLivre {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .chapitres {
+        flex-grow: 1;
+        margin-left: 1em;
+    }
+
+    .livreImg {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .livreImg {
+        width: 300px;
+    }
+
+    .chapitres {
+        margin-left: 2em;
+    }
+}

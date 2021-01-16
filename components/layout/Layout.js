@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 //Components
 import Header from "../header/Header";
+//import HeaderLogin from "../header/HeaderLogin";
 import Footer from "../footer/Footer";
 
 function Layout(props) {

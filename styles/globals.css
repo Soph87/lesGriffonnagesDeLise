@@ -33,10 +33,32 @@ body.dark {
     box-sizing: border-box;
 }
 
+#__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+main {
+    flex-grow: 1;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.container950 {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.containerTop {
+    margin: 4em 0;
 }
 
 h2 {
@@ -46,8 +68,21 @@ h2 {
     color: #46403b;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body.dark h2 {
     color: #ebebeb;
+}
+
+a {
+    color: #797775;
+}
+
+body.dark a {
+    color: #c2c2c2;
 }
 
 .btn {
