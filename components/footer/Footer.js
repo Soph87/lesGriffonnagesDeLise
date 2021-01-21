@@ -11,7 +11,7 @@ export default function Footer() {
     let annee = new Date().getFullYear();
 
     return (
-        <footer className={[styles.footer, colorMode === "dark" ? styles.darkFooter : " "].join(" ")}>
+        <footer className={`${styles.footer} ${colorMode === "dark" ? styles.darkFooter : ""}`}>
             <div className='container'>
                 <p>
                     Lise Furnion - {annee} - Tout droit réservé -{" "}

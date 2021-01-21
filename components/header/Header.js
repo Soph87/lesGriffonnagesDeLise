@@ -12,7 +12,7 @@ const Header = forwardRef((props, ref) => {
     const router = useRouter();
 
     return (
-        <header ref={ref} className={[styles.header, colorMode === "dark" ? styles.darkHeader : " "].join(" ")}>
+        <header ref={ref} className={`${styles.header} ${colorMode === "dark" ? styles.darkHeader : ""}`}>
             <div className='container'>
                 <Link href='/'>
                     <a className={styles.titre}>

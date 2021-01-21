@@ -20,8 +20,7 @@ export default function Fiction({ livre }) {
     });
     return (
         <div className='containerTop'>
-            <section
-                className={[styles.sectionLivre, "container", colorMode === "dark" ? styles.darkLivre : " "].join(" ")}>
+            <section className={`container ${styles.sectionLivre} ${colorMode === "dark" ? styles.darkLivre : ""}`}>
                 <img src={livre.couverture} alt={livre.couvAlt} className={styles.livreImg} />
                 <div className={styles.chapitres}>
                     <h2>{livre.titre}</h2>

@@ -11,7 +11,7 @@ const Livres = forwardRef(({ livres }, ref) => {
         return <Livre data={livre} key={livre.titre} />;
     });
     return (
-        <div className={colorMode === "dark" ? styles.darkLivres : " "} ref={ref}>
+        <div className={colorMode === "dark" ? styles.darkLivres : ""} ref={ref}>
             {livresListe}
         </div>
     );

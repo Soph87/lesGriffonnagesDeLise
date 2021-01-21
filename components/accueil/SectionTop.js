@@ -10,8 +10,8 @@ import { ThemeContext } from "../ThemeContext";
 export default function SectionTop({ scroll }) {
     const { colorMode } = React.useContext(ThemeContext);
     return (
-        <section className={[styles.section, colorMode === "dark" ? styles.darkSection : " "].join(" ")}>
-            <div className={[styles.refImg, "container"].join(" ")}>
+        <section className={colorMode === "dark" ? styles.darkSection : ""}>
+            <div className={`${styles.refImg} container`}>
                 <div className={styles.hero}>
                     <Logo className={styles.logo} />
                     <div className={styles.aside}>

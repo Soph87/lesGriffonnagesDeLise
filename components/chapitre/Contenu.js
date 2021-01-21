@@ -12,10 +12,7 @@ export default function Contenu({ chapitre, index, fiction, max }) {
 
     return (
         <div className='containerTop'>
-            <section
-                className={[styles.sectionLivre, "container950", colorMode === "dark" ? styles.darkLivre : " "].join(
-                    " "
-                )}>
+            <section className={`container950 ${colorMode === "dark" ? styles.darkLivre : ""}`}>
                 <Link href={`/${fiction}`}>
                     <a className={styles.lienSommaire}>
                         <Fleche className={styles.fleche} />
@@ -57,6 +54,12 @@ export default function Contenu({ chapitre, index, fiction, max }) {
                         </div>
                     </div>
                 </div>
+                <Link href={`/${fiction}`}>
+                    <a className={styles.lienSommaire}>
+                        <Fleche className={styles.fleche} />
+                        Sommaire
+                    </a>
+                </Link>
             </section>
         </div>
     );

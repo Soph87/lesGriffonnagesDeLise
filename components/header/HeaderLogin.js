@@ -18,7 +18,7 @@ export default function HeaderLogin() {
                 </Link>
 
                 <div className={styles.headerDroit}>
-                    <nav className={[styles.nav, styles.navLogin].join(" ")}>
+                    <nav className={`${styles.nav} ${styles.navLogin}`}>
                         <Link href='/'>
                             <a className={styles.liens}>Accueil</a>
                         </Link>

@@ -6,7 +6,7 @@ import styles from "./livres.module.css";
 export default function Livre({ data }) {
     return (
         <section className={styles.sections}>
-            <div className={[styles.livre, "container"].join(" ")}>
+            <div className={`${styles.livre} container`}>
                 <img src={data.couverture} alt={data.couvAlt} className={styles.livreImg} />
                 <div className={styles.aside}>
                     <h2>{data.titre}</h2>
