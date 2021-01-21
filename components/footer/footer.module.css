@@ -10,6 +10,12 @@
     background-color: #33353f;
 }
 
-.footer a {
+.footer a,
+.footer.darkFooter a {
     color: #797775;
+}
+
+.footer a:hover,
+.darkFooter a:hover {
+    color: #df5d3b;
 }

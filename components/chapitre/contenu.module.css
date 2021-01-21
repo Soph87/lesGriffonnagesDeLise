@@ -23,6 +23,77 @@
     margin: 1em 0;
 }
 
-.chapitreContainer h2 {
+.darkLivre .chapitreContainer {
+    background-color: #33353f;
+}
+
+.titreChapitre {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.titreChapitre img {
+    width: 20px;
+    height: auto;
+}
+
+.titreChapitre img:first-of-type {
+    transform: rotate(180deg);
+    margin-right: 5px;
+}
+
+.titreChapitre img:last-of-type {
+    margin-left: 5px;
+}
+
+.titreChapitre h2 {
+    margin-top: 2em;
     text-align: center;
+}
+
+.contenu {
+    padding: 2em 0.5em 0.5em;
+}
+
+.contenu p {
+    line-height: 2em;
+    font-size: 1em;
+    margin: 2em 0;
+}
+
+.contenu p:first-of-type {
+    margin-top: 0;
+}
+
+.contenu p:last-of-type {
+    margin-bottom: 0;
+}
+
+.separateur {
+    max-width: 480px;
+    display: block;
+    margin: 2em auto;
+}
+
+.note {
+    margin-bottom: 3em;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .contenu {
+        padding: 2em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .contenu {
+        padding: 2em 4em;
+    }
 }

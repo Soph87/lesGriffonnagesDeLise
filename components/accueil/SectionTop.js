@@ -7,7 +7,7 @@ import styles from "./sectiontop.module.css";
 //Components
 import { ThemeContext } from "../ThemeContext";
 
-export default function SectionTop() {
+export default function SectionTop({ scroll }) {
     const { colorMode } = React.useContext(ThemeContext);
     return (
         <section className={[styles.section, colorMode === "dark" ? styles.darkSection : " "].join(" ")}>
@@ -21,7 +21,9 @@ export default function SectionTop() {
                             urna eu, convallis nibh. Praesent nisl arcu, congue dictum leo ut, egestas ultricies purus.
                             Integer accumsan metus eu.
                         </p>
-                        <button className='btn'>Je choisis une lecture</button>
+                        <button className='btn' onClick={scroll}>
+                            Je choisis une lecture
+                        </button>
                     </div>
                 </div>
                 <img

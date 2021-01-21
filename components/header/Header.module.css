@@ -6,10 +6,12 @@
     left: 0;
     width: 100%;
     z-index: 15;
+    border-bottom: 1px solid #e5dedb;
 }
 
 .darkHeader {
     background-color: #33353f;
+    border-bottom: 1px solid #20222a;
 }
 
 .header > div {
@@ -48,6 +50,17 @@
 
 .darkHeader .nav a {
     color: #eae5e2;
+}
+
+.nav a.actif,
+.darkHeader .nav a.actif {
+    color: #df5d3b;
+    text-decoration: underline;
+}
+
+.nav a:hover,
+.darkHeader .nav a:hover {
+    color: #df5d3b;
 }
 
 @media screen and (min-width: 400px) {

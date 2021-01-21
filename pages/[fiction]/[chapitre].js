@@ -8,7 +8,7 @@ export default function Chapitre({ chapitre, index }) {
 
     return (
         <Layout title={titlePage}>
-            <ContenuChapitre chapitre={chapitre.chapitres} index={index} fiction={chapitre.slug} />
+            <ContenuChapitre chapitre={chapitre.chapitres} index={index} fiction={chapitre.slug} max={chapitre.max} />
         </Layout>
     );
 }
@@ -19,6 +19,7 @@ export async function getServerSideProps({ params }) {
     const livreFields = `
     titre,
     'chapitres': chapitres[${chapitreNbr}],
+    'max': count(chapitres),
     'slug': slug.current,
     `;
     const data = await client.fetch(`*[_type == "livres" && slug.current == $slug]{${livreFields}}`, { slug });
@@ -28,7 +29,7 @@ export async function getServerSideProps({ params }) {
     return {
         props: {
             chapitre,
-            index: chapitreNbr,
+            index: chapitreNbr + 1,
         },
     };
 }

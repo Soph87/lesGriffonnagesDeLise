@@ -61,11 +61,16 @@ main {
     margin: 4em 0;
 }
 
-h2 {
+h2,
+h3 {
     font-weight: 600;
     font-size: 1.2em;
     margin: 0 0 0.5em;
     color: #46403b;
+}
+
+h3 {
+    font-size: 1em;
 }
 
 img {
@@ -73,7 +78,8 @@ img {
     height: auto;
 }
 
-body.dark h2 {
+body.dark h2,
+body.dark h3 {
     color: #ebebeb;
 }
 
@@ -83,6 +89,11 @@ a {
 
 body.dark a {
     color: #c2c2c2;
+}
+
+a:hover,
+body.dark a:hover {
+    color: #df5d3b;
 }
 
 .btn {
@@ -97,8 +108,10 @@ body.dark a {
     text-decoration: none;
 }
 
-.btn:hover {
+.btn:hover,
+body.dark .btn:hover {
     background-color: #e07a5f;
+    color: #edeae9;
 }
 
 .sr-only {

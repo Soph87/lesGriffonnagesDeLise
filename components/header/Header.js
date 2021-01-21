@@ -1,15 +1,18 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 //CSS
 import styles from "./Header.module.css";
 //Components
 import { ThemeContext } from "../ThemeContext";
 import Switch from "./SwitchMode";
 
-function Header() {
+const Header = forwardRef((props, ref) => {
     const { colorMode } = React.useContext(ThemeContext);
+    const router = useRouter();
+
     return (
-        <header className={[styles.header, colorMode === "dark" ? styles.darkHeader : " "].join(" ")}>
+        <header ref={ref} className={[styles.header, colorMode === "dark" ? styles.darkHeader : " "].join(" ")}>
             <div className='container'>
                 <Link href='/'>
                     <a className={styles.titre}>
@@ -20,10 +23,10 @@ function Header() {
                 <div className={styles.headerDroit}>
                     <nav className={styles.nav}>
                         <Link href='/'>
-                            <a className={styles.liens}>Accueil</a>
+                            <a className={router.pathname === "/" ? styles.actif : undefined}>Accueil</a>
                         </Link>
                         <Link href='/a-propos'>
-                            <a>À propos</a>
+                            <a className={router.pathname === "/a-propos" ? styles.actif : undefined}>À propos</a>
                         </Link>
                     </nav>
                     <Switch />
@@ -31,6 +34,6 @@ function Header() {
             </div>
         </header>
     );
-}
+});
 
 export default Header;
